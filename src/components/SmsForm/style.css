@@ -1,23 +1,23 @@
-/* style.css */
-.container {
-  position: relative;
+.sms-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.form {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 100%);
-}
-.form h2 {
-  margin-bottom: 30px;
+.form-group {
+  margin-bottom: 15px;
 }
 
-.form-group input {
-  padding: 10px 20px;
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   width: 100%;
-  max-width: 100%;
 }
 
 .submit-button {
@@ -27,8 +27,6 @@
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
-  margin-top: 10px;
-  width: 100%;
 }
 
 .submit-button:hover {

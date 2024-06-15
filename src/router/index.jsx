@@ -33,9 +33,9 @@ const publicLoader = async () => {
 };
 
 const privateLoader = async () => {
-  if (!isAuthenticated()) {
-    throw redirect(routes.login());
-  }
+  // if (!isAuthenticated()) {
+  //   throw redirect(routes.login());
+  // }
   return null;
 };
 

@@ -4,14 +4,6 @@ class LocalStorageService {
     localStorage.setItem('refresh_token', refresh_token);
   };
 
-  static rememberUser = (remember) => {
-    localStorage.setItem('remember', remember + '');
-  };
-
-  static checkRemember = () => {
-    return localStorage.getItem('remember') === 'true';
-  };
-
   static getAccessToken = () => {
     return localStorage.getItem('access_token');
   };
