@@ -9,7 +9,6 @@ const SMSForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic to handle form submission and notification
     console.log({ campaignName, originator, recipients, content });
   };
 

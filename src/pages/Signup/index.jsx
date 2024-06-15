@@ -15,7 +15,7 @@ const RegisterForm = () => {
   const [error, setError] = useState(null);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const handleSignupClick = () => {
-    navigate(routes.login);
+    navigate('/login');
   };
 
   const handleSubmit = async (event) => {
