@@ -4,12 +4,12 @@ const instance = axios.create({
 });
 
 const login = ({ email, password }) =>
-  instance.post(`/auth/login/`, { email, password }).catch((error) => {
+  instance.post(`/auth/login`, { email, password }).catch((error) => {
     throw new Error(error);
   });
 
 const register = ({ email, password }) =>
-  instance.post(`/auth/register/`, { email, password }).catch((error) => {
+  instance.post(`/auth/register`, { email, password }).catch((error) => {
     throw new Error(error);
   });
 

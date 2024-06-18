@@ -3,15 +3,18 @@ import './style.css';
 import SideBar from '../../components/SideBar';
 import SMSForm from '../../components/SmsForm';
 import LocalStorageService from '../../utils/LocalStorageServices';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [selectedItem, setSelectedItem] = useState('SMS Campaigner');
+  const navigate = useNavigate();
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
   const handleLogout = () => {
     LocalStorageService.clearToken();
+    navigate('/login');
   };
   return (
     <div className='App'>

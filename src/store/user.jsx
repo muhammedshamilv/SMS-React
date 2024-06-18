@@ -4,16 +4,16 @@ import LocalStorageService from '../utils/LocalStorageServices';
 
 export const onLogin = createAsyncThunk('auth/login', async (data) => {
   const response = await login(data);
-  const { token, refresh_token, user } = response.data;
-  LocalStorageService.setToken(token, refresh_token);
+  const { access_token, refresh_token, user } = response.data;
+  LocalStorageService.setToken(access_token, refresh_token);
   LocalStorageService.setUser(user);
   return response.data;
 });
 
 export const onRegister = createAsyncThunk('auth/register', async (data) => {
   const response = await register(data);
-  const { token, refresh_token } = response.data;
-  LocalStorageService.setToken(token, refresh_token);
+  const { access_token, refresh_token } = response.data;
+  LocalStorageService.setToken(access_token, refresh_token);
   return response.data;
 });
 

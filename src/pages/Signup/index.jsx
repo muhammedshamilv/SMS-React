@@ -26,7 +26,7 @@ const RegisterForm = () => {
       if (onRegister.fulfilled.match(resultAction)) {
         navigate(routes.home);
       } else {
-        setError('Login failed. Please try again');
+        setError('Register failed. Please try with other email');
         setShowErrorModal(true);
       }
     } catch (error) {
